@@ -8,15 +8,20 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/target/debug/main",
+            "program": "${workspaceFolder}/bazel-bin/src/bin/active-lights",
             "args": [
                 "-uQ8qlgRi43QO-rdLWR-qPvnxf2G-Qt3pJvtmVFBcG"
             ],
+            "sourceMap": {
+                ".": "${workspaceFolder}/"
+            },
             "env": {
                 "RUST_LOG": "info"
             },
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "${defaultBuildTask}"
+            "preLaunchTask": "build: debug",
+            "terminal": "console",
+            "internalConsoleOptions": "openOnSessionStart"
         }
     ]
 }

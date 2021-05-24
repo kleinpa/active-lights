@@ -1,0 +1,299 @@
+"""
+@generated
+cargo-raze crate build file.
+
+DO NOT EDIT! Replaced on runs of cargo-raze
+"""
+
+# buildifier: disable=load
+load("@bazel_skylib//lib:selects.bzl", "selects")
+
+# buildifier: disable=load
+load(
+    "@rules_rust//rust:rust.bzl",
+    "rust_binary",
+    "rust_library",
+    "rust_test",
+)
+
+package(default_visibility = [
+    # Public for visibility by "@raze__crate__version//" targets.
+    #
+    # Prefer access through "//cargo", which limits external
+    # visibility to explicit Cargo.toml dependencies.
+    "//visibility:public",
+])
+
+licenses([
+    "restricted",  # WTFPL from expression "WTFPL"
+])
+
+# Generated Targets
+
+rust_binary(
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_hue_discover_bridge",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/bin/hue_discover_bridge.rs",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        ":hueclient",
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)
+
+rust_binary(
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_hue_get_all_groups",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/bin/hue_get_all_groups.rs",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        ":hueclient",
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)
+
+rust_binary(
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_hue_get_all_lights",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/bin/hue_get_all_lights.rs",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        ":hueclient",
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)
+
+rust_binary(
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_hue_get_all_scenes",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/bin/hue_get_all_scenes.rs",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        ":hueclient",
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)
+
+rust_binary(
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_hue_register_user",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/bin/hue_register_user.rs",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        ":hueclient",
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)
+
+rust_binary(
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_hue_set_group_state",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/bin/hue_set_group_state.rs",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        ":hueclient",
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)
+
+rust_binary(
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_hue_set_light_state",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/bin/hue_set_light_state.rs",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        ":hueclient",
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)
+
+rust_binary(
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_hue_set_scene",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/bin/hue_set_scene.rs",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        ":hueclient",
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)
+
+rust_library(
+    name = "hueclient",
+    srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
+    crate_root = "src/lib.rs",
+    crate_type = "lib",
+    data = [],
+    edition = "2018",
+    rustc_flags = [
+        "--cap-lints=allow",
+    ],
+    tags = [
+        "cargo-raze",
+        "manual",
+    ],
+    version = "0.4.1",
+    # buildifier: leave-alone
+    deps = [
+        "@raze__regex__1_5_4//:regex",
+        "@raze__reqwest__0_10_10//:reqwest",
+        "@raze__serde__1_0_126//:serde",
+        "@raze__serde_json__1_0_64//:serde_json",
+        "@raze__ssdp_probe__0_2_1//:ssdp_probe",
+        "@raze__thiserror__1_0_25//:thiserror",
+    ],
+)

@@ -1,0 +1,17 @@
+load("@rules_rust//rust:defs.bzl", "rust_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+rust_binary(
+    name = "active-lights",
+    srcs = ["active-lights.rs"],
+    deps = [
+        "//cargo:chrono",
+        "//cargo:clap",
+        "//cargo:env_logger",
+        "//cargo:hueclient",
+        "//cargo:log",
+        "//cargo:sun",
+        "//cargo:tokio",
+    ],
+)

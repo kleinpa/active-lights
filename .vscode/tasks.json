@@ -4,16 +4,23 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "cargo",
-            "command": "build",
+            "type": "shell",
+            "command": "bazelisk build -c dbg //...",
+            "label": "build: debug",
             "problemMatcher": [
                 "$rustc"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "label": "rust: cargo build"
-        }
+            }
+        },
+        {
+            "type": "shell",
+            "command": "bazelisk run @cargo_raze//:raze -- --manifest-path=${workspaceFolder}/Cargo.toml",
+            "label": "rust: cargo raze",
+            "problemMatcher": [],
+            "group": "build",
+        },
     ]
 }
